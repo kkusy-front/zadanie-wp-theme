@@ -30,7 +30,7 @@
         <header id="masthead" class="header">
             <div class="header__container">
                 <div>
-                    <img class="header__logo"
+                    <img class="header__logo" alt="Mobilizacja biznesu logo"
                         src="<?php echo esc_url(wp_get_attachment_url(get_theme_mod('custom_logo'))); ?>">
                 </div><!-- .site-branding -->
 

@@ -16,7 +16,7 @@
         <div class="footer__top">
             <div class="footer__top-left">
                 <div class="footer__logo">
-                    <img class="header__logo"
+                    <img class="header__logo" alt="Mobilizacja biznesu logo"
                         src="<?php echo esc_url(wp_get_attachment_url(get_theme_mod('custom_logo'))); ?>" />
                 </div>
                 <div class="footer__description">
