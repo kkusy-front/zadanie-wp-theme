@@ -1,0 +1,368 @@
+.hero {
+  width: 100%;
+  min-height: 664px;
+  background: radial-gradient(
+      35.21% 43.76% at 5.1% 7.01%,
+      rgba(0, 135, 254, 0.149164) 0%,
+      rgba(0, 135, 254, 0.2) 0%,
+      rgba(0, 135, 254, 0) 100%
+    ),
+    radial-gradient(
+      27.36% 45.53% at 90.42% 60.07%,
+      rgba(0, 135, 254, 0.2) 0%,
+      rgba(0, 135, 254, 0) 100%
+    ),
+    #1f1f1d;
+
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+
+  &--absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @include respond("xs") {
+    padding-top: 150px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+    @include respond("xs") {
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    color: $color-white;
+    &-header {
+      @extend .h1;
+    }
+
+    &-descripion {
+      @extend .p;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    &--contact {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+  }
+
+  &__phone-number {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.2px;
+    text-decoration-line: underline;
+    color: #ffffff;
+
+    &:hover,
+    &:focus {
+      color: $color-primary-normal;
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+
+    @include respond("xs") {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.possibilities {
+  margin-top: 700px;
+  padding-bottom: 100px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    @include respond("xs") {
+      flex-direction: column;
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+
+    @include respond("xs") {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__text {
+    color: $color-black;
+
+    &-header {
+      @extend .h2;
+    }
+  }
+
+  &__elements {
+    list-style: none;
+    padding: 1rem 0;
+  }
+  &__element {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.statistics {
+  background: radial-gradient(
+      35.21% 43.76% at 5.1% 7.01%,
+      rgba(0, 135, 254, 0.149164) 0%,
+      rgba(0, 135, 254, 0.2) 0%,
+      rgba(0, 135, 254, 0) 100%
+    ),
+    radial-gradient(
+      27.36% 45.53% at 90.42% 60.07%,
+      rgba(0, 135, 254, 0.2) 0%,
+      rgba(0, 135, 254, 0) 100%
+    ),
+    #1f1f1d;
+
+  padding: 50px 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__numbers {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include respond("m") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond("xs") {
+      padding: 0 25px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__element {
+    color: $color-white;
+    &::before {
+      content: "\2022";
+      color: $color-primary-normal;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+
+    &-description {
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+
+      letter-spacing: 0.2px;
+    }
+  }
+
+  &__action {
+    display: flex;
+    justify-content: end;
+    padding: 25px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+
+    @include respond("xs") {
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+.helper {
+  padding: 50px 0;
+  margin-bottom: 94px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__heading {
+    margin: 20px 0;
+    @extend .h2;
+  }
+
+  &__elements {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include respond("m") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond("xs") {
+      padding: 0 25px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__element {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    &-image {
+      max-width: 48px;
+      height: auto;
+      margin: 16px 0;
+    }
+
+    &-title {
+      color: #1f1f1d;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      @extend .p;
+    }
+
+    &-description {
+      margin: 8px 0;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+
+      text-align: center;
+      letter-spacing: 0.2px;
+      color: #5f5f5c;
+    }
+  }
+}
+
+.blog {
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &-h2 {
+      color: #1f1f1d;
+      @extend .h2;
+    }
+
+    &-link {
+      width: fit-content;
+    }
+
+    @include respond("xs") {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+
+  &__posts {
+    margin-top: 64px;
+    margin-bottom: 100px;
+
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include respond("m") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond("xs") {
+      padding: 0 25px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__post {
+    display: flex;
+    flex-direction: column;
+    max-width: 336px;
+
+    @include respond("m") {
+      max-width: 432px;
+      &:nth-child(n + 3) {
+        display: none;
+      }
+    }
+
+    @include respond("s") {
+      max-width: 343px;
+    }
+
+    &-heading {
+      color: #1f1f1d;
+      margin: 32px 0 8px 0;
+      @extend .p;
+    }
+
+    &-bottom {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-date {
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.2px;
+      color: #9b9b99;
+    }
+
+    &-link {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 120%;
+      letter-spacing: 0.2px;
+      text-decoration-line: underline;
+      color: #1f1f1d;
+    }
+  }
+
+  &__image {
+    max-width: 336px;
+    width: 100%;
+    height: auto;
+
+    @include respond("m") {
+      max-width: 432px;
+      max-height: 237px;
+    }
+
+    @include respond("s") {
+      max-width: 343px;
+    }
+  }
+}

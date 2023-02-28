@@ -1,0 +1,120 @@
+.footer {
+  background: radial-gradient(
+        45% 104.25% at 85.62% 105.07%,
+        rgba(0, 135, 254, 0.2) 0%,
+        rgba(0, 135, 254, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    #1f1f1d;
+  padding: 64px 0;
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    flex-direction: row;
+
+    color: $color-white;
+
+    @include respond("xs") {
+      flex-direction: column;
+    }
+
+    &-left {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+
+      @include respond("xs") {
+        width: 100%;
+      }
+    }
+
+    &-right {
+      display: flex;
+      align-items: end;
+      justify-content: end;
+      width: 50%;
+
+      @include respond("xs") {
+        align-items: start;
+        justify-content: start;
+        width: 100%;
+      }
+    }
+  }
+
+  &__logo {
+    max-width: 180px;
+    width: 100%;
+    height: auto;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: rgba(255, 255, 255, 0.72);
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+
+    .menu-item {
+      display: block;
+      a {
+        color: $color-white;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        text-decoration: none;
+        letter-spacing: 0.2px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 64px;
+    margin-top: 64px;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+
+    color: $color-white;
+
+    @include respond("xs") {
+      flex-direction: column;
+    }
+
+    &-left {
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+
+      @include respond("xs") {
+        flex-direction: column;
+        margin-bottom: 32px;
+        gap: 8px;
+      }
+
+      a {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+        color: rgba(255, 255, 255, 0.72);
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

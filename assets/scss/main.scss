@@ -1,0 +1,33 @@
+/*!
+Theme Name: zadanie
+Theme URI: https://zadanie.kusy-web.pl/
+Author: Krystian Kusy
+Author URI: https://zadanie.kusy-web.pl/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: zadanie
+*/
+
+@import './normalize';
+
+@import "abstract/colors";
+@import "abstract/variables";
+@import "abstract/mixins.scss";
+
+@import "base/base";
+@import "base/animation";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/button";
+@import "components/form";
+@import "components/tooltip";
+@import "components/header";
+@import "components/footer";
+
+
+@import "layout/grid";
+
+@import "pages/home";
