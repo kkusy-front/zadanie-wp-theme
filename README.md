@@ -1,6 +1,6 @@
 
 # Wordpress theme with webpack
-Theme use ACF plugin.
+Theme use ACF plugin.\
 Demo app -> [demo](https://zadanie.kusy-web.pl/)
 
 ## Run
