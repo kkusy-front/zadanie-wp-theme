@@ -39,6 +39,9 @@
 
   &__text {
     color: $color-white;
+    width: 50%;
+    margin-right: 48px;
+
     &-header {
       @extend .h1;
     }
@@ -52,6 +55,13 @@
       display: flex;
       align-items: center;
       gap: 1.5rem;
+      margin-top: 48px;
+      margin-bottom: 32px;
+    }
+
+    @include respond("xs"){
+      width: 100%;
+      margin-right: 0;
     }
   }
 
@@ -70,17 +80,20 @@
   }
 
   &__image {
-    max-width: 100%;
+    max-width: 568px;
+    width: 100%;
     height: auto;
 
     @include respond("xs") {
       margin-top: 1rem;
+      margin-bottom: 84px;
+      max-width: 400px;
     }
   }
 }
 
 .possibilities {
-  margin-top: 700px;
+  margin-top: 748px;
   padding-bottom: 100px;
 
   &__container {
@@ -89,17 +102,20 @@
     gap: 1rem;
 
     @include respond("xs") {
+      margin-top: 828px;
       flex-direction: column;
     }
   }
 
   &__image {
-    max-width: 100%;
+    max-width: 550px;
+    width: 100%;
     height: auto;
 
     @include respond("xs") {
       margin-top: 1rem;
       margin-bottom: 1rem;
+      max-width: 400px;
     }
   }
 
@@ -317,8 +333,9 @@
       }
     }
 
-    @include respond("s") {
+    @include respond("xs") {
       max-width: 343px;
+      margin-bottom: 64px;
     }
 
     &-heading {

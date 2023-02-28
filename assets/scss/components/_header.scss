@@ -1,13 +1,15 @@
 .header {
   position: relative;
   z-index: 2;
+
   &.sticky {
     position: sticky;
     left: 0;
+    right: 0;
     top: 0;
     background: #1f1f1d;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1rem 0;
   }
 
   &__container {
@@ -17,11 +19,14 @@
     padding: 1rem;
     margin: 0 auto;
     @extend .container;
+
+    @include respond("xs") {
+      padding: 0 1rem;
+    }
   }
 
   &__logo {
-    max-width: 180px;
-    width: 100%;
+    width: 180px;
     height: auto;
   }
 
@@ -32,7 +37,6 @@
     @include respond("xs") {
       display: flex;
       justify-content: end;
-      margin: 1rem;
     }
   }
 
@@ -111,13 +115,13 @@
     }
   }
 
-  .header__menu {
+  &__menu {
     padding: 0 1rem;
 
     &--open.header__menu {
       visibility: visible;
       background-color: $color-white;
-      min-height: 100vh;
+      min-height: 100%;
       padding: 40px;
     }
 
@@ -125,7 +129,9 @@
       visibility: hidden;
       position: absolute;
       top: 100px;
+      left: 0;
       right: 0;
+      text-align: end;
     }
   }
 
