@@ -145,6 +145,12 @@
           text-decoration: underline;
         }
       }
+
+      &.btn a:hover {
+        color: $color-white;
+        text-decoration: none;
+      }
+
       a {
         color: $color-white;
         font-weight: 700;
@@ -154,6 +160,7 @@
 
         &:hover {
           text-decoration: underline;
+          color: $color-primary-normal;
         }
 
         @include respond("xs") {
