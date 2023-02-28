@@ -18,8 +18,7 @@
     "webpack-cli": "^4.10.0"
   },
   "scripts": {
-    "build": "webpack --mode development",
-    "dist": "webpack --mode production",
+    "build": "webpack --mode production",
     "watch": "webpack --watch --mode development"
   }
 }
